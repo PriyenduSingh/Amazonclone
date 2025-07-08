@@ -14,7 +14,7 @@ const productsData = [
   { id: 7, name: 'Books', price: 250, description: 'Harry Potter and the Philosophers Stone.A young boy discovers he’s a wizard and begins his magical journey at Hogwarts.', image: 'https://m.media-amazon.com/images/I/81q77Q39nEL._SY385_.jpg' },
   { id: 8, name: 'iPads', price: 40000, description: 'Apple iPad 11″: A16 chip, 27.69 cm (11″) Model, Liquid Retina Display, 128GB, Wi-Fi 6, 12MP Front/12MP Back Camera, Touch ID, All-Day Battery Life — Blue', image: 'https://m.media-amazon.com/images/I/61kMIKm23VL._SX425_.jpg' },
   { id: 9, name: 'Shoes', price: 400, description: 'ATHCO Mens Koach Memory Foam Comfort Shoes', image: 'https://m.media-amazon.com/images/I/71bCFPtGoSL._SX535_.jpg' },
-  { id: 10, name: 'Smart Speakers', price: 4499, description: 'Smart voice assistant devices.Hands-free smart devices that respond to voice commands, stream music, control smart home gadgets, and provide real-time information using AI-powered assistants like Alexa, Siri, or Google Assistant.', image: 'https://m.media-amazon.com/images/I/51C+FWhW9xL._AC_UY218_.jpg' }, ,
+  { id: 10, name: 'Smart Speakers', price: 4499, description: 'Smart voice assistant devices.Hands-free smart devices that respond to voice commands, stream music, control smart home gadgets, and provide real-time information using AI-powered assistants like Alexa, Siri, or Google Assistant.', image: 'https://m.media-amazon.com/images/I/51C+FWhW9xL._AC_UY218_.jpg' },
 ];
 
 function Home({ cart, setCart }) {
