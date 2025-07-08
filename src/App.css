@@ -1,3 +1,5 @@
+/* Base styles remain mostly same */
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -8,6 +10,7 @@
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: black;
@@ -23,19 +26,22 @@
 
 .search-bar {
   flex: 1;
-  margin: 0 20px;
+  margin: 10px;
   padding: 10px;
   border-radius: 4px;
   border: none;
   font-size: 16px;
+  min-width: 200px;
 }
 
 .cart-link {
   font-size: 16px;
   color: white;
   text-decoration: none;
+  padding: 10px 0;
 }
 
+/* Grid layout responsive */
 .grid-sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -84,16 +90,7 @@ button:hover {
   background-color: #f08804;
 }
 
-.cart {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.cart li {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
+/* Cart styles */
 .cart-items {
   margin-top: 20px;
   background: white;
@@ -103,13 +100,14 @@ button:hover {
 
 .cart-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border-bottom: 1px solid #ccc;
   padding: 15px 0;
 }
 
 .cart-image {
-  width: 120px;
+  width: 100px;
   height: auto;
   object-fit: contain;
   margin-right: 20px;
@@ -117,11 +115,7 @@ button:hover {
 
 .cart-details {
   flex: 1;
-}
-
-.cart-details h3 {
-  font-size: 18px;
-  margin: 5px 0;
+  min-width: 200px;
 }
 
 .cart-controls {
@@ -129,6 +123,7 @@ button:hover {
   align-items: center;
   gap: 10px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .cart-controls button {
@@ -156,6 +151,7 @@ button:hover {
   font-size: 16px;
   font-weight: bold;
   color: #B12704;
+  margin-top: 10px;
 }
 
 .cart-total {
@@ -163,4 +159,42 @@ button:hover {
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
+}
+
+/* ✅ Responsive styles */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin: 10px -10px;
+  }
+
+  .grid-sections {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-image {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 10px;
+  }
+
+  .cart-price {
+    align-self: flex-end;
+  }
+
+  .cart-controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
 }
